@@ -17,9 +17,14 @@ public class CashRegister {
 //Display an appropriate message if the customer provided too little money or the exact amount.
 		if (tendered < costOfItem) {
 			System.err.println("This is less than what you need to pay, I cannot accept this.");
+			double toShort = costOfItem - tendered;
+			System.out.print("You are ");
+			System.out.printf("%.2f", toShort);
+			System.out.println(" dollars short.");
 		} else if (costOfItem == tendered) {
 			System.out.println("Looks like you're all set then! Thank you, have a nice day!");
 		}
+		
 		if (tendered > costOfItem) {
 			calculateChange(change, tendered, costOfItem);
 //interesting struggle to print commas and periods in the right places when i wanted them. finally got it though.
