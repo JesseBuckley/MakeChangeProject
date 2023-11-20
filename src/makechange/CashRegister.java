@@ -20,7 +20,7 @@ public class CashRegister {
 			double toShort = costOfItem - tendered;
 			System.out.print("You are ");
 			System.out.printf("%.2f", toShort);
-			System.out.println(" dollars short.");
+			System.out.println(" short.");
 		} else if (costOfItem == tendered) {
 			System.out.println("Looks like you're all set then! Thank you, have a nice day!");
 		}
@@ -126,7 +126,7 @@ public class CashRegister {
 		} if (howManyDime > 1) {
 			System.out.print(howManyDime + " dimes, ");
 		} else if (howManyDime >= 1) {
-			System.out.println(howManyDime + " dime, ");
+			System.out.print(howManyDime + " dime, ");
 		}
 		
 		int howManyNickel = changeInt / nickel;
